@@ -180,7 +180,7 @@ class Node2Vec:
         gensim_version = pkg_resources.get_distribution("gensim").version
         size = 'size' if gensim_version < '4.0.0' else 'vector_size'
         if size not in skip_gram_params:
-            skip_gram_params[size] = self.dimensions
+            skip_gram_params[vector_size] = self.dimensions
 
         if 'sg' not in skip_gram_params:
             skip_gram_params['sg'] = 1
